@@ -7,9 +7,9 @@ namespace TeduShop.Data
 {
     public class TeduShopDbContext:DbContext
     {
-        public TeduShopDbContext() : base("")
-        {
+        //public TeduShopDbContext() : base("")
+        //{
 
-        }
+        //}
     }
 }

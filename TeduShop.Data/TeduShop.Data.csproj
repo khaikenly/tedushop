@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DFFB5999-0ABF-4016-8A99-91DDA098FEB6}</ProjectGuid>
+    <ProjectGuid>{9F9A02C3-0D79-4FFA-B218-10B7542C1BFC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassLibrary3</RootNamespace>
-    <AssemblyName>ClassLibrary3</AssemblyName>
+    <RootNamespace>TeduShop.Data</RootNamespace>
+    <AssemblyName>TeduShop.Data</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -130,6 +130,12 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TeduShop.Common\TeduShop.Common.csproj">
+      <Project>{6648121f-f5c2-4b3d-bd56-14e541d54f5c}</Project>
+      <Name>TeduShop.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
