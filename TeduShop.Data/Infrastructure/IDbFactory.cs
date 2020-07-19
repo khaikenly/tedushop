@@ -4,8 +4,8 @@ using System.Text;
 
 namespace TeduShop.Data.Infrastructure
 {
-    public interface IDbFactory
+    public interface IDbFactory:IDisposable
     {
-
+        TeduShopDbContext Init();
     }
 }
