@@ -1,39 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Text;
 using TeduShop.Model.Models;
+using System.Data.Entity;
 
 namespace TeduShop.Data
 {
-    public class TeduShopDbContext:DbContext
+    public class TeduShopDbContext : DbContext
     {
-        public TeduShopDbContext() : base("TeduShopConnection")
+        public TeduShopDbContext() : base("TeduShopConnectionString")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
 
-        public DbSet<Footer> Footers { get; set; }
-        public DbSet<Menu> Menus { get; set; }
-        public DbSet<MenuGroup> MenuGroups { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderDetails> OrderDetails { get; set; }
-        public DbSet<Page> Pages { get; set; }
-        public DbSet<Post> Posts { get; set; }
-        public DbSet<PostCategory> PostCategories { get; set; }
-        public DbSet<Posttag> Posttags { get; set; }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<ProductCategory> ProductCategories { get; set; }
-        public DbSet<ProductTag> ProductTags { get; set; }
-        public DbSet<Slide> Slides { get; set; }
-        public DbSet<SupportOnline> SupportOnlines { get; set; }
-        public DbSet<SystemConfig> SystemConfigs { get; set; }
-        public DbSet<Tag> Tags { get; set; }
-        public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
+        public DbSet<Footer> Footers { set; get; }
+        public DbSet<Menu> Menus { set; get; }
+        public DbSet<MenuGroup> MenuGroups { set; get; }
+        public DbSet<Order> Orders { set; get; }
+        public DbSet<OrderDetails> OrderDetails { set; get; }
+        public DbSet<Page> Pages { set; get; }
+        public DbSet<Post> Posts { set; get; }
+        public DbSet<PostCategory> PostCategories { set; get; }
+        public DbSet<Posttag> PostTags { set; get; }
+        public DbSet<Product> Products { set; get; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        public DbSet<ProductCategory> ProductCategories { set; get; }
+        public DbSet<ProductTag> ProductTags { set; get; }
+        public DbSet<Slide> Slides { set; get; }
+        public DbSet<SupportOnline> SupportOnlines { set; get; }
+        public DbSet<SystemConfig> SystemConfigs { set; get; }
+
+        public DbSet<Tag> Tags { set; get; }
+
+        public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
+
+
+        protected override void OnModelCreating(DbModelBuilder builder)
         {
-            base.OnModelCreating(modelBuilder);
+
         }
     }
 }
